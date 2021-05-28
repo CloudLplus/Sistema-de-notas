@@ -1,0 +1,104 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    //variaveis
+    float avm,avm2,avm3;
+    float avt,avt2,avt3;
+    float res,res2,res3;
+    float media,media2,media3,mediaf;
+    int escolha;
+
+
+
+    cout<<"Bem vindo usuario, por favor escolha uma operação a seguir"<<endl;
+    cout<<"1- Conferir media do trimestre  2- Conferir media final"<<"\n\n";
+
+
+
+    cin>>escolha;
+
+    //primeiro loop
+    while(escolha==1)
+    {
+        res=avm+avt;
+        media=res/2;
+
+        system("cls");
+        cout<<"Por favor insira sua nota da avm"<<endl;
+        cin>>avm;
+        system("cls");
+        cout<<"Por favor insira sua nota da avt"<<endl;
+        cin>>avt;
+        system("cls");
+
+        res=avm+avt;
+        media=res/2;
+
+        if(media>=7)
+        {
+            cout<<"Parabens! sua nota media do primeiro trimestre e azul."<<endl;
+            cout<<"Media do primeiro trimestre: "<<media<<"\n\n";
+            system("pause");
+            return 0;
+        }else{
+        cout<<"Infelizmente sua nota media do primeiro trimeste e vermelha."<<endl;
+        cout<<"Media do primeiro trimestre: "<<media<<"\n\n";
+        system("pause");
+        return 0;
+        }
+
+    }
+    
+    //loop 2
+    while(escolha==2)
+    {
+        system("cls");
+
+        cout<<"Por favor insira sua nota da AVM do primeiro trimestre: ";
+        cin>>avm;
+        system("cls");
+        cout<<"Por favor insira sua nota da AVT do primeiro trimestre: ";
+        cin>>avt;
+        system("cls");
+        cout<<"Por favor insira sua nota da AVM do segundo trimestre: ";
+        cin>>avm2;
+        system("cls");
+        cout<<"Por favor insira sua nota da AVT do segundo trimestre: ";
+        cin>>avt2;
+        system("cls");
+        cout<<"Por favor insira sua nota da AVM do terceiro trimestre: ";
+        cin>>avm3;
+        system("cls");
+        cout<<"Por favor insira sua nota da AVT do terceiro trimestre: ";
+        cin>>avt3;
+        system("cls");
+        
+        res=avm+avt;
+        res2=avm2+avt2;
+        res3=avt3+avt3;
+        media=res/2;
+        media2=res2/2;
+        media3=res3/2;
+        mediaf=media+media2+media3;
+        
+        if(mediaf>=21)
+        {
+            cout<<"Parabens por passar de ano!"<<endl;
+            cout<<"Media final :"<<mediaf<<endl;
+            return 0;
+        }else{
+        cout<<"Infelizmente voce reprovou."<<endl;
+        cout<<"Media final :"<<mediaf<<endl;
+        return 0;
+        }
+
+    }
+
+
+
+    system("pause");
+    return 0;
+}
